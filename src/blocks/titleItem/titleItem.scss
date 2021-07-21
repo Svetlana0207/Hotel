@@ -1,0 +1,12 @@
+.titleItem {
+  @import './__title/titleItem__title.scss';
+  @import './__text/titleItem__text.scss';
+  @import './__text/--H1/titleItem__text--H1.scss';
+  @import './__text/--H2/titleItem__text--H2.scss';
+  @import './__text/--H3/titleItem__text--H3.scss';
+  @import './__text/--Body/titleItem__text--Body.scss';
+  @import './__title/--H1/titleItem__title--H1.scss';
+  @import './__title/--H2/titleItem__title--H2.scss';
+  @import './__title/--H3/titleItem__title--H3.scss';
+  @import './__title/--Body/titleItem__title--Body.scss';
+}

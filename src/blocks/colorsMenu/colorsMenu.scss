@@ -1,0 +1,7 @@
+.colorsMenu {
+  height: 610px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  @import './__colorItem/colorsMenu__colorItem.scss';
+}

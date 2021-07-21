@@ -1,0 +1,15 @@
+.colorsandtype {
+  @import './__colorsMenu/colorsandtype__colorsMenu.scss';
+  @import './__titleMenu/colorsandtype__titleMenu.scss';
+  @import './__emblem-wrapper/colorsandtype__emblem-wrapper.scss';
+  @import './__menu-container/colorsandtype__menu-container.scss';
+  @import './__wrapper/colorsandtype__wrapper.scss';
+  position: relative;
+  max-width: 1440px;
+  height: 900px;
+  padding: 10px;
+  background: #FFFFFF;
+  @media (max-width:691px) {
+    height: 100%;
+  }
+}

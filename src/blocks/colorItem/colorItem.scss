@@ -1,0 +1,22 @@
+.colorItem {
+  @import './__rect/colorItem__rect.scss';
+  @import './__rect/--DarkShade100/colorItem__rect--DarkShade100.scss';
+  @import './__text/colorItem__text.scss';
+  @import './__rect/--DarkShade75/colorItem__rect--DarkShade75.scss';
+  @import './__rect/--DarkShade50/colorItem__rect--DarkShade50.scss';
+  @import './__rect/--DarkShade25/colorItem__rect--DarkShade25.scss';
+  @import './__rect/--DarkShade5/colorItem__rect--DarkShade5.scss';
+  @import './__rect/--purple/colorItem__rect--purple.scss';
+  @import './__rect/--green/colorItem__rect--green.scss';
+  &__textColor {
+    font-weight: normal;
+  }
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

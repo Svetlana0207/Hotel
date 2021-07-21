@@ -1,0 +1,35 @@
+yhtml(lang="en")
+  head
+    link(rel="stylesheet", href="fonts.css")
+    link(rel="stylesheet", href="app.css")
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body
+    mixin color-item(colorName, text, modificator)
+      li.colorItem.colorsMenu__colorItem
+        div(class='colorItem__rect '+'colorItem__rect'+modificator)
+        .colorItem__text= colorName
+          .colorItem__textColor=text
+    mixin title-item(titleItem, text)
+      li.titleItem.titleMenu__titleItem
+        div(class='titleItem__title '+'titleItem__title--'+titleItem)= titleItem
+        div(class='titleItem__text '+'titleItem__text--'+titleItem)= text
+    .colorsandtype
+      .colorsandtype__emblem-wrapper
+        include ../blocks/emblem-default/emblem-default
+      .colorsandtype__wrapper
+        .colorsandtype__menu-container
+          ul.colorsMenu.colorsandtype__colorsMenu
+            +color-item('Dark Shade 100%','#1F2041','--DarkShade100')
+            +color-item('Dark Shade 75%','#1F2041','--DarkShade75')
+            +color-item('Dark Shade 50%','#1F2041','--DarkShade50')
+            +color-item('Dark Shade 25%','#1F2041','--DarkShade25')
+            +color-item('Dark Shade 5%','#1F2041','--DarkShade5')
+            +color-item('Purple','#BC9CFF','--purple')
+            +color-item('Green','#6FCF97','--green')
+          ul.titleMenu.colorsandtype__titleMenu
+            +title-item('H1', 'This one is the sub-section or widget title')
+            +title-item('H2','Next one is the item title inside widgets')
+            +title-item('H3', 'This is a label or CTA text')
+            +title-item('Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
