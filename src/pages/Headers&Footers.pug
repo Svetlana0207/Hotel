@@ -1,0 +1,37 @@
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    base(href="/")
+    link(rel="stylesheet", href="reset.css")
+    link(rel="stylesheet", href="app.css")
+    link(rel="stylesheet", href="fonts.css")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Headers-Footers
+    
+  body 
+    mixin button-else(text)
+      .button-else__body
+        .button-else__text=text
+    mixin button-default(text)
+      .button-default__text=text
+    mixin menu-item(elementname, dropdown=false, active=false)
+      if (dropdown==true)
+        if (active==true)
+          a(href="#")
+            li(class="header-menu__item"+"header-menu__item--active")= elementname
+              .header-menu__dropdown-img
+                img(src=require('../img/expand.svg'))
+        else
+          li(class="header-menu__item")= elementname
+            .header-menu__dropdown-img
+              img(src=require('../img/expand.svg'))
+      else
+        if (active==true)
+          li(class="header-menu__item "+"header-menu__item--active")= elementname
+        else
+          li(class="header-menu__item")= elementname
+    mixin footer-menu(...items)
+      each item in items
+        li.Footer-Widgets-and-Copyright-Bar__menu-item=item
+    .headers-and-footers
+      include ../blocks/headers-and-footers/headers-and-footers

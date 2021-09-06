@@ -1,0 +1,17 @@
+@mixin button-w-h($width,$height) {
+  width: $width ;
+  height: $height;
+}
+.button-default {
+  @import './__text/button-default__text.scss';
+  @include button-w-h(99px,44px);
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 0px;
+  &:hover {
+    opacity: 0.5;
+  }
+}

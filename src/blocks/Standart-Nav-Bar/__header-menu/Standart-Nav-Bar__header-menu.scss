@@ -1,0 +1,22 @@
+&__header-menu {
+  margin: 0.7875rem 1.428571428571429rem 0 0;
+  @media (max-width:891px) {
+    order: 1;
+  }
+  @media (max-width:600px) {
+    margin-right: 0;
+  }
+  .header-menu__item {
+    @media (max-width:467px) {
+      font-size: 11px;
+    }
+  }
+  .header-menu__dropdown-img {
+    @media (max-width:467px) {
+      width: 12px;
+      img {
+        width:10px ;
+      }
+    }
+  }
+}

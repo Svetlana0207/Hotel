@@ -1,0 +1,26 @@
+body {
+  background: #E5E5E5;
+}
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+@mixin button-w-h($width,$height) {
+  width: $width ;
+  height: $height;
+}
+@import './blocks/headers-and-footers/headers-and-footers.scss';
+@import './blocks/button-default/button-default';
+@import './blocks/button-else/button-else.scss';
+@import './blocks/header-menu/header-menu.scss';
+@import './blocks/social/social.scss';
+@import './blocks/Standart-Nav-Bar/Standart-Nav-Bar.scss';
+@import './blocks/Standart-Logged-In-Nav-Bar/Standart-Logged-In-Nav-Bar.scss';
+@import './blocks/user/user.scss';
+@import './blocks/Form-Elements/text-field-default/text-field-default.scss';
+@import './blocks/Form-Elements/subscription-text-field/subscription-text-field.scss';
+@import './blocks/Footer-Widgets-and-Copyright-Bar/Footer-Widgets-and-Copyright-Bar.scss';
+
+a {
+    text-decoration: none;
+}

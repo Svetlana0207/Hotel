@@ -1,34 +1,33 @@
 
 const webpack = require('webpack')
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
  entry: {
-     app:'./src/Colors&Type.js'
+     main:'./src/Headers&Footers.js'
  },
  output:{
      filename:'[name].js',
-     path: path.resolve(__dirname, './dist'),
-
+     path: path.resolve(__dirname, 'dist'),
+     assetModuleFilename: 'assets/[hash][ext][query]'
+    
  },
  devServer: {
     static: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000
+    port: 9000,
+
  },
  module: {
      rules:[{
          test: /\.css$/,
          use: [
-            {
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                  esModule: false,
-                },
-              },
-             "css-loader"
-         ]
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          
+      ]
      },
      {
         test: /\.scss$/,
@@ -52,28 +51,40 @@ module.exports = {
     },
 {test: /\.pug$/, use: 'pug-loader'},
 {
-    test: /\.(png|jpe?g|gif|svg)$/i,
-    loader: 'file-loader',
-    options: {
-      name: '[name].[ext]',
-    },
-  },
+  test: /\.(png|jpg|gif|svg)$/i,
+  type: 'asset/resource',
+  exclude: /fonts/,
+
+},
 ]
  },
-//  devServer:{
-//      overlay: true
-//  },
  plugins: [
      new MiniCssExtractPlugin({
          filename: "[name].css"
      }),
      new HtmlWebpackPlugin({
         title: 'Title',
-        template: 'src/pages/Colors&Type.pug'
+        template: 'src/pages/Headers&Footers.pug'
       }),
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
-      })
+      }),
+      new CopyPlugin({
+        patterns: [
+          {
+            from: path.resolve(__dirname, "fonts.css"),
+            to:path.resolve(__dirname, 'dist/fonts.css')
+          },
+          {
+            from: path.resolve(__dirname, "reset.css"),
+            to:path.resolve(__dirname, 'dist/reset.css')
+          },
+          {
+              from:path.resolve(__dirname,'fonts'),
+              to:path.resolve(__dirname,'dist/fonts')
+          }
+        ],
+      }),
  ],
 }

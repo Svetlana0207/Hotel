@@ -1,0 +1,7 @@
+&__logo {
+  flex: 1 1 auto;
+  height: 40px;
+  @media (max-width:428px) {
+    flex-basis: 306px;
+  }
+}

@@ -1,0 +1,27 @@
+@mixin button-w-h($width,$height) {
+  width: $width ;
+  height: $height;
+}
+.button-else {
+  @import './__body/button-else__body.scss';
+  @import './__text/button-else__text.scss';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  @include button-w-h(99px,44px);
+  border-radius: 22px;
+  border-width: 0px;
+  padding: 0;
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+  }
+  &:hover::before {
+    opacity: 0.5;
+  }
+}

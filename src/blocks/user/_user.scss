@@ -1,0 +1,9 @@
+.user {
+  display: flex;
+  width: 121px;
+  height: 30px;
+  justify-content: space-between;
+  align-items: center;
+  @import './__rect/user__rect.scss';
+  @import './__name/user__name.scss';
+}

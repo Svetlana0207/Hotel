@@ -1,0 +1,22 @@
+&__button-login {
+  align-self: center;
+  padding: 2px;
+  margin-right: 20px;
+  flex-basis: 87px;
+  height: 34px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  p {
+    padding-top: 7px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    width: 83px;
+    height: 30px;
+    background: white;
+
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #BC9CFF;
+  }
+}

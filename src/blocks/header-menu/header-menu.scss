@@ -1,0 +1,7 @@
+.header-menu {
+  flex-basis: 447px;
+  @import './__menu-list/header-menu__menu-list.scss';
+  @import './__item/header-menu__item.scss';
+  @import './__item/--active/header-menu__item--active.scss';
+  @import './__dropdown-img/header-menu____dropdown-img.scss';
+}
